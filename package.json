@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/*.spec.ts -r ts-node/register",
     "init": "tsc --init",
     "start": "nodemon -e ts --exec ts-node ./src/index.ts",
     "build": "tsc"
@@ -17,10 +17,14 @@
     "koa-router": "^10.0.0"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.14",
     "@types/koa": "^2.11.6",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-router": "^7.4.1",
+    "@types/mocha": "^8.2.0",
     "@types/node": "^14.14.20",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
     "nodemon": "^2.0.7",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
